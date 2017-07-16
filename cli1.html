@@ -1,0 +1,325 @@
+
+<!DOCTYPE html>
+
+<html>
+   
+   <head>
+         
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">      
+     
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="icon" href="https://linuxwilltakeover.github.io/security.ico" type="image/x-icon" />
+		<title>Command line interface.</title>  	  
+	 
+	</head>
+   
+   <body onContextMenu="window.location='https://linuxwilltakeover.github.io/nature.html'";>
+
+
+
+		<div  class="container">
+		
+			<div class="row">
+			
+				<h1 style="text-align:center;">CLI basic commands.</h1>
+				<h2 style="text-align:center;">Type the commands shown below. Do not copy and paste. Type!</h2>
+				<br>
+				<hr />
+				
+				<img src="https://linuxwilltakeover.github.io/images/runasadministrator.jpg" class="img img-responsive">
+				
+				</hr />
+		
+			<br><h2><strong>Exercise 1.</strong>&nbsp;&nbsp;	Find out your computer name.							</h2>
+			
+			<p><code><h3>	hostname					</h3></code></p>
+			<p><code><h3>	echo %computername%					</h3></code></p>
+			
+			
+			<br>
+			<hr />
+		
+			<br><h2><strong>Exercise 2.</strong>&nbsp;&nbsp; Find out the user account you're logged in as.								</h2>
+			
+			<p><code><h3>		whoami				</h3></code></p>
+			<p><code><h3>		echo %username%				</h3></code></p>
+			
+			
+			<br>
+			<hr />
+
+			<br><h2><strong>Exercise 3.</strong>&nbsp;&nbsp;Find out the operating system you're running.								</h2>
+			
+			<p><code><h3>	winver					</h3></code></p>
+			<p><code><h3>	echo %os%					</h3></code></p>
+			
+			
+			
+			<br>
+			<hr />
+			
+			<br><h2><strong>Exercise 4.</strong>&nbsp;&nbsp;Find out "a lot of info" about your system.							</h2>
+			
+			<p><code><h3>	systeminfo					</h3></code></p>
+			<p><code><h3>	systeminfo > mysysteminfo.txt					</h3></code></p>
+			<p><code><h3>	mysysteminfo.txt					</h3></code> --- Now close the file.</p>
+			<p><code><h3>	msinfo32					</h3></code></p>
+			<p><code><h3>	dxdiag					</h3></code></p>
+			
+			<br>
+			<hr />
+			
+			<br><h2><strong>Exercise 5.</strong>&nbsp;&nbsp;Find out your processor architecture, identifier, level and revision.								</h2>
+			
+			<p><code><h3>	echo %processor_architecture%					</h3></code></p>
+			<p><code><h3>	echo %processor_identifier%					</h3></code></p>
+			<p><code><h3>	echo %processor_level%					</h3></code></p>
+			<p><code><h3>	echo %processor_revision%					</h3></code></p>
+			
+			<br>
+			<hr />
+			
+			<br><h2><strong>Exercise 6.</strong>&nbsp;&nbsp;Basic folder and file creation.								</h2>
+			
+			<p><code><h3>	cd \					</h3></code></p>
+			<p><code><h3>	mkdir Stuff					</h3></code></p>
+			<p><code><h3>	cd Stuff					</h3></code></p>
+			<p><code><h3>	echo Mike Meyers or James Messer? > both.txt					</h3></code></p>
+			<p><code><h3>	type both.txt					</h3></code></p>
+			<p><code><h3>	echo Study both, of course. >> both.txt					</h3></code></p>
+			<p><code><h3>	type both.txt					</h3></code></p>
+			<p><code><h3>	dir					</h3></code></p>
+			<p><code><h3>	notepad both.txt:topsecret.txt					</h3></code> --- click yes, type any message and close it.</p>
+			<p><code><h3>	dir 					</h3></code></p>
+			<p><code><h3>	dir /a:h					</h3></code></p>
+			<p><code><h3>	notepad both.txt:topsecret.txt					</h3></code> --- close it. You just used ADS (alternate data streams, a way to add metadata to your files).</p>
+			
+			<br>
+			<hr />
+			
+			<br><h2><strong>Exercise 7.</strong>&nbsp;&nbsp;More ADS.								</h2>
+			
+			<p><code><h3>	cd \					</h3></code></p>
+			<p><code><h3>	mkdir ADS					</h3></code></p>
+			<p><code><h3>	cd ADS					</h3></code></p>
+			<p><code><h3>	echo Having fun. > fun.txt					</h3></code></p>
+			<p><code><h3>	dir 					</h3></code></p>
+			<p><code><h3>	echo wscript.echo "You were hacked!" > fun.txt:hacked.vbs					</h3></code></p>
+			<p><code><h3>	wscript fun.txt:hacked.vbs					</h3></code> --- You just ran a Visual Basic script that could have done a lot of damage ...</p>
+			<br>
+			<hr />
+			
+			<br><h2><strong>Exercise 8.</strong>&nbsp;&nbsp;Creating and deleting files and folders.								</h2>
+			
+			<p><code><h3>cd \						</h3></code></p>
+			<p><code><h3>mkdir Resistance.						</h3></code></p>
+			<p><code><h3>cd Resistance						</h3></code></p>
+			<p><code><h3>for /L %i in (1,1,9) do echo Libertad. > archive%i.txt						</h3></code></p>
+			<p><code><h3>	dir					</h3></code></p>
+			<p><code><h3>for /L %i in (0,5,100) do echo Quiero cerveza. > file%i.txt						</h3></code></p>
+			<p><code><h3>	dir					</h3></code></p>
+			<p><code><h3>	mkdir Beer					</h3></code></p>
+			<p><code><h3>	cd Beer					</h3></code></p>
+			<p><code><h3>	echo Dos Equis > xx.txt					</h3></code></p>
+			<p><code><h3>	type xx.txt					</h3></code></p>
+			<p><code><h3>	dir					</h3></code></p>
+			<p><code><h3>	cd ..					</h3></code></p>
+			<p><code><h3>		dir /a:d				</h3></code></p>
+			<p><code><h3>	rd /q /s Beer					</h3></code></p>
+			<p><code><h3>		dir /a:d				</h3></code></p>
+			<p><code><h3>	dir					</h3></code></p>
+			<p><code><h3>	del *.txt					</h3></code></p>
+			<p><code><h3>	dir					</h3></code></p>
+			
+			
+			<br>
+			<hr />
+			
+			<br><h2><strong>Exercise 9.</strong>&nbsp;&nbsp;	Sequentially running commands.							</h2>
+			
+			<p><code><h3> cls & cd \  & hostname	& whoami & title H@ck3r 2017.				</h3></code></p>
+			
+			
+			<br>
+			<hr />
+			
+			<br><h2><strong>Exercise 10.</strong>&nbsp;&nbsp;	Finding out running processes.							</h2>
+			
+			<p><code><h3>	tasklist					</h3></code></p>
+			<p><code><h3>	tasklist  | more					</h3></code> --- hit the spacebar to continue.</p>
+			<p><code><h3>	tasklist /svc					</h3></code></p>
+			<p><code><h3>	tasklist /?					</h3></code></p>
+			
+			
+			<br>
+			<hr />
+			
+			<br><h2><strong>Exercise 11.</strong>&nbsp;&nbsp;	An elegant way to find out the IPv4 address.							</h2>
+			
+			<p><code><h3>	netsh interface ip show address					</h3></code></p>
+			
+			
+			<br>
+			<hr />
+			
+			<br><h2><strong>Exercise 12.</strong>&nbsp;&nbsp;								</h2>
+			
+			<p><code><h3>logoff						</h3></code></p>
+			
+			
+			<br>
+			<hr />
+			
+			<!--
+			<br><h2><strong>Exercise 13.</strong>&nbsp;&nbsp;								</h2>
+			
+			<p><code><h3>						</h3></code></p>
+			<p><code><h3>						</h3></code></p>
+			<p><code><h3>						</h3></code></p>
+			<p><code><h3>						</h3></code></p>
+			
+			<br>
+			<hr />
+			
+			<br><h2><strong>Exercise 14.</strong>&nbsp;&nbsp;								</h2>
+			
+			<p><code><h3>						</h3></code></p>
+			<p><code><h3>						</h3></code></p>
+			<p><code><h3>						</h3></code></p>
+			<p><code><h3>						</h3></code></p>
+			
+			<br>
+			<hr />
+			
+			<br><h2><strong>Exercise 15.</strong>&nbsp;&nbsp;								</h2>
+			
+			<p><code><h3>						</h3></code></p>
+			<p><code><h3>						</h3></code></p>
+			<p><code><h3>						</h3></code></p>
+			<p><code><h3>						</h3></code></p>
+			
+			<br>
+			<hr />
+			
+			<br><h2><strong>Exercise 16.</strong>&nbsp;&nbsp;								</h2>
+			
+			<p><code><h3>						</h3></code></p>
+			<p><code><h3>						</h3></code></p>
+			<p><code><h3>						</h3></code></p>
+			<p><code><h3>						</h3></code></p>
+			
+			<br>
+			<hr />
+			
+			<br><h2><strong>Exercise 17.</strong>&nbsp;&nbsp;								</h2>
+			
+			<p><code><h3>						</h3></code></p>
+			<p><code><h3>						</h3></code></p>
+			<p><code><h3>						</h3></code></p>
+			<p><code><h3>						</h3></code></p>
+			
+			<br>
+			<hr />
+			
+			<br><h2><strong>Exercise 18.</strong>&nbsp;&nbsp;								</h2>
+			
+			<p><code><h3>						</h3></code></p>
+			<p><code><h3>						</h3></code></p>
+			<p><code><h3>						</h3></code></p>
+			<p><code><h3>						</h3></code></p>
+			
+			<br>
+			<hr />
+			
+			<br><h2><strong>Exercise 19.</strong>&nbsp;&nbsp;								</h2>
+			
+			<p><code><h3>						</h3></code></p>
+			<p><code><h3>						</h3></code></p>
+			<p><code><h3>						</h3></code></p>
+			<p><code><h3>						</h3></code></p>
+			
+			<br>
+			<hr />
+			
+			<br><h2><strong>Exercise 20.</strong>&nbsp;&nbsp;								</h2>
+			
+			<p><code><h3>						</h3></code></p>
+			<p><code><h3>						</h3></code></p>
+			<p><code><h3>						</h3></code></p>
+			<p><code><h3>						</h3></code></p>
+			
+			<br>
+			<hr />
+			
+			<br><h2><strong>Exercise 21.</strong>&nbsp;&nbsp;								</h2>
+			
+			<p><code><h3>						</h3></code></p>
+			<p><code><h3>						</h3></code></p>
+			<p><code><h3>						</h3></code></p>
+			<p><code><h3>						</h3></code></p>
+			
+			<br>
+			<hr />
+			
+			<br><h2><strong>Exercise 22.</strong>&nbsp;&nbsp;								</h2>
+			
+			<p><code><h3>						</h3></code></p>
+			<p><code><h3>						</h3></code></p>
+			<p><code><h3>						</h3></code></p>
+			<p><code><h3>						</h3></code></p>
+			
+			<br>
+			<hr />
+			
+			<br><h2><strong>Exercise 23.</strong>&nbsp;&nbsp;								</h2>
+			
+			<p><code><h3>						</h3></code></p>
+			<p><code><h3>						</h3></code></p>
+			<p><code><h3>						</h3></code></p>
+			<p><code><h3>						</h3></code></p>
+			
+			<br>
+			<hr />
+			
+			<br><h2><strong>Exercise 24.</strong>&nbsp;&nbsp;								</h2>
+			
+			<p><code><h3>						</h3></code></p>
+			<p><code><h3>						</h3></code></p>
+			<p><code><h3>						</h3></code></p>
+			<p><code><h3>						</h3></code></p>
+			
+			<br>
+			<hr />
+			
+			<br><h2><strong>Exercise 25.</strong>&nbsp;&nbsp;								</h2>
+			
+			<p><code><h3>						</h3></code></p>
+			<p><code><h3>						</h3></code></p>
+			<p><code><h3>						</h3></code></p>
+			<p><code><h3>						</h3></code></p>
+			
+			<br>
+			<hr />
+
+				-->
+
+
+			</div>	
+		
+		
+			
+		
+		</div>
+		<br>
+		<div class="container-fluid">
+		
+			<img src="https://linuxwilltakeover.github.io/images/paralafauna04.jpg" class="img img-responsive">
+		
+		</div>
+		
+		
+      
+   </body>
+</html>
